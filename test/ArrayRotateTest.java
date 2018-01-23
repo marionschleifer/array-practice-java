@@ -11,5 +11,6 @@ public class ArrayRotateTest {
         int[] arr = new int[]{1, 2, 3, 4, 5};
         assertArrayEquals(new int[]{2, 3, 4, 5, 1}, ArrayRotate.rotate(arr));
         assertArrayEquals(new int[]{3, 4, 5, 1, 2}, ArrayRotate.rotate(arr));
+        assertArrayEquals(new int[]{4, 5, 1, 2, 3}, ArrayRotate.rotate(arr));
     }
 }
