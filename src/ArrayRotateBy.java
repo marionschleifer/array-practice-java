@@ -5,13 +5,16 @@ public class ArrayRotateBy {
 
         for (int i = 0; i < by; i++) {
             for (int j = 0; j < arr.length - 1; j++) {
-                int tmp = arr[j];
-                arr[j] = arr[(j + 1) % arr.length];
-                arr[(j + 1) % arr.length] = tmp;
+                swap(arr, j, (j + 1) % arr.length);
             }
         }
-
         System.out.println(Arrays.toString(arr));
         return arr;
+    }
+
+    private static void swap(int[] arr, int a, int b) {
+        int tmp = arr[a];
+        arr[a] = arr[b];
+        arr[b] = tmp;
     }
 }
