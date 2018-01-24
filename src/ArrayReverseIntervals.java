@@ -9,11 +9,10 @@ public class ArrayReverseIntervals {
 
     }
 
-    private static void reversePart(int[] arr, int start, int interval) {
-        int countDown = start + interval - 1;
-        for (int i = start; i < start + interval / 2; i++) {
-            swap(arr, i, countDown);
-            countDown--;
+    private static void reversePart(int[] arr, int first, int interval) {
+        int last = first + interval - 1;
+        for (int i = first; i < first + interval / 2; i++) {
+            swap(arr, i, last--);
         }
     }
 
